@@ -64,14 +64,6 @@ class Carrito {
           //Creo el nuevo producto
           const nuevoProducto = new ProductoEnCarrito(sku, producto.nombre, cantidad);
 
-          // //Espero a la funcion que me va a actualizar el stock del producto
-          // await updateStockBySku(sku, cantidad);
-
-          // //Checkeando stock producto
-          // if (producto.stock < cantidad) {
-          //   reject(`No tenemos el suficiente stock del producto que queres`);
-          // }
-
           //Checkeo si el producto esta o no en el carro
           const indexProducto = this.productos.findIndex((prod) => prod.sku === nuevoProducto.sku);
 
